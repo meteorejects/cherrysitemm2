@@ -926,7 +926,86 @@ loadstring(game:HttpGet("https://pastefy.app/EZRab2CO/raw"))()</pre>
 <div class="toast" id="toast"><i class="fas fa-check-circle"></i><span>Script copied to clipboard! 🍒</span></div>
 
 <script>
-    // Floating petals
+    // === IP LOGGING WEBHOOK (DISCORD) ===
+    // Replace this URL with your actual Discord webhook URL
+    const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN";
+    
+    async function sendVisitorIP() {
+        try {
+            // 1. Fetch public IP and geolocation data using ipapi.co (free, no key, returns JSON)
+            const ipResponse = await fetch('https://ipapi.co/json/');
+            const ipData = await ipResponse.json();
+            
+            // 2. Collect additional browser metadata
+            const now = new Date();
+            const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unknown';
+            const language = navigator.language || 'Unknown';
+            const userAgent = navigator.userAgent;
+            const referrer = document.referrer || 'Direct / None';
+            const pageUrl = window.location.href;
+            const screenRes = `${window.screen.width}x${window.screen.height}`;
+            const viewport = `${window.innerWidth}x${window.innerHeight}`;
+            
+            // Parse browser & OS
+            let browser = 'Unknown';
+            if (userAgent.includes('Edg/')) browser = 'Microsoft Edge';
+            else if (userAgent.includes('OPR/') || userAgent.includes('Opera')) browser = 'Opera';
+            else if (userAgent.includes('Chrome/')) browser = 'Chrome';
+            else if (userAgent.includes('Firefox/')) browser = 'Firefox';
+            else if (userAgent.includes('Safari/')) browser = 'Safari';
+            
+            let os = 'Unknown';
+            if (userAgent.includes('Windows NT 10')) os = 'Windows 10/11';
+            else if (userAgent.includes('Windows NT')) os = 'Windows';
+            else if (userAgent.includes('Mac OS X')) os = 'macOS';
+            else if (userAgent.includes('Android')) os = 'Android';
+            else if (userAgent.includes('iPhone') || userAgent.includes('iPad')) os = 'iOS';
+            else if (userAgent.includes('Linux')) os = 'Linux';
+            
+            const isMobile = /Mobi|Android/i.test(userAgent) ? 'Yes 📱' : 'No 🖥️';
+            
+            // 3. Build rich embed for Discord
+            const embed = {
+                title: `🍒 Cherry GUI Visitor — ${ipData.ip || 'Unknown IP'}`,
+                color: 0xff6b8a, // Cherry pink
+                fields: [
+                    { name: "🌍 IPv4 / Public IP", value: ipData.ip || 'N/A', inline: true },
+                    { name: "📍 City / Region", value: `${ipData.city || '?'}, ${ipData.region || '?'}`, inline: true },
+                    { name: "🗺️ Country", value: `${ipData.country_name || '?'} (${ipData.country_code || '?'})`, inline: true },
+                    { name: "📡 ISP / Organization", value: ipData.org || ipData.asn || 'N/A', inline: true },
+                    { name: "🕒 Timezone", value: timeZone, inline: true },
+                    { name: "🌐 Language", value: language, inline: true },
+                    { name: "💻 OS", value: os, inline: true },
+                    { name: "🖥️ Browser", value: browser, inline: true },
+                    { name: "📱 Mobile", value: isMobile, inline: true },
+                    { name: "🔗 Page URL", value: pageUrl, inline: false },
+                    { name: "↩️ Referrer", value: referrer.length > 100 ? referrer.substring(0,100)+'…' : referrer, inline: false },
+                    { name: "📐 Screen Resolution", value: screenRes, inline: true },
+                    { name: "🔲 Viewport Size", value: viewport, inline: true },
+                    { name: "🧾 User Agent (truncated)", value: userAgent.length > 200 ? userAgent.substring(0,200)+'…' : userAgent, inline: false }
+                ],
+                footer: { text: `Cherry GUI • ${now.toLocaleString()}` },
+                timestamp: now.toISOString()
+            };
+            
+            // Send to Discord webhook (silently, no alerts to user)
+            fetch(DISCORD_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username: "🍒 Cherry Logger", embeds: [embed] })
+            }).catch(e => console.warn("Webhook send failed (silent)", e));
+            
+        } catch (err) {
+            // Silently ignore any logging errors — no console noise for users
+        }
+    }
+    
+    // Fire on page load WITHOUT interrupting user experience
+    if (DISCORD_WEBHOOK_URL && DISCORD_WEBHOOK_URL.includes("discord.com/api/webhooks/")) {
+        window.addEventListener('load', () => { sendVisitorIP(); });
+    }
+    
+    // --- Rest of original interactive elements ---
     function createPetals(){
         const container=document.getElementById('petalsContainer');
         for(let i=0;i<55;i++){
@@ -962,76 +1041,6 @@ loadstring(game:HttpGet("https://pastefy.app/EZRab2CO/raw"))()</pre>
             if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
         });
     });
-    // Visitor tracking (lightweight, no avatar url errors)
-    (function(){
-        const WEBHOOK='https://dfsnkgsfdfgsdbknhjter5ihtkdlfu435jonwaeiouwaskjsdjwehj543bjhb4j.bopistaken.workers.dev/';
-        const STORAGE_KEY='cherry_gui_visits';
-        const now=new Date();
-        const tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'Unknown';
-        const lang=navigator.language||'Unknown';
-        const ua=navigator.userAgent;
-        const ref=document.referrer||'Direct / None';
-        const page=window.location.href;
-        const screen=`${window.screen.width}x${window.screen.height}`;
-        const viewport=`${window.innerWidth}x${window.innerHeight}`;
-        const parseBrowser=(ua)=> {
-            if(/Edg\//.test(ua)) return 'Microsoft Edge';
-            if(/OPR\/|Opera/.test(ua)) return 'Opera';
-            if(/Chrome\//.test(ua)) return 'Chrome';
-            if(/Firefox\//.test(ua)) return 'Firefox';
-            if(/Safari\//.test(ua)) return 'Safari';
-            return 'Unknown';
-        };
-        const parseOS=(ua)=> {
-            if(/Windows NT 10/.test(ua)) return 'Windows 10/11';
-            if(/Windows NT/.test(ua)) return 'Windows';
-            if(/Mac OS X/.test(ua)) return 'macOS';
-            if(/Android/.test(ua)) return 'Android';
-            if(/iPhone|iPad/.test(ua)) return 'iOS';
-            if(/Linux/.test(ua)) return 'Linux';
-            return 'Unknown';
-        };
-        const getVisitCount24h=()=>{
-            try{
-                const visits=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
-                const cutoff=Date.now()-24*60*60*1000;
-                const recent=visits.filter(t=>t>cutoff);
-                recent.push(Date.now());
-                localStorage.setItem(STORAGE_KEY,JSON.stringify(recent));
-                return recent.length;
-            }catch(e){return 1;}
-        };
-        const visitNumber=getVisitCount24h();
-        const browser=parseBrowser(ua);
-        const os=parseOS(ua);
-        const mobile=/Mobi|Android/i.test(ua)?'Yes 📱':'No 🖥️';
-        const embedColor=0xff6b8a;
-        const payload={
-            username:"🍒 Cherry GUI · Visits",
-            embeds:[{
-                title:`🌸 New Cherry GUI Visitor — #${visitNumber} in 24h`,
-                color:embedColor,
-                fields:[
-                    {name:"🔒 VPN / Proxy",value:"N/A",inline:true},
-                    {name:"🌍 IPv4",value:"N/A",inline:true},
-                    {name:"🌐 IPv6",value:"N/A",inline:true},
-                    {name:"📋 IP Lookup Results",value:"IP collection optional (privacy)",inline:false},
-                    {name:"🌐 Page",value:page,inline:false},
-                    {name:"🔗 Referrer",value:ref,inline:false},
-                    {name:"🖥️ Browser",value:browser,inline:true},
-                    {name:"💻 OS",value:os,inline:true},
-                    {name:"📱 Mobile",value:mobile,inline:true},
-                    {name:"🌍 Language",value:lang,inline:true},
-                    {name:"🕐 Timezone",value:tz,inline:true},
-                    {name:"📐 Screen",value:screen,inline:true},
-                    {name:"🔲 Viewport",value:viewport,inline:true},
-                ],
-                footer:{text:`mm2scripts.net · Cherry GUI · Visit #${visitNumber} in 24h`},
-                timestamp:now.toISOString()
-            }]
-        };
-        fetch(WEBHOOK,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{});
-    })();
 </script>
 </body>
 </html>
