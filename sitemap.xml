@@ -1,175 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
-
-    <!-- Main Page / Home -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main Homepage -->
     <url>
-        <loc>https://mm2scripts.net/</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
+        <loc>https://mm2scripts.com/</loc>
+        <lastmod>2026-07-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://mm2scripts.net/"/>
-        <image:image>
-            <image:loc>https://mm2scripts.net/og-image.png</image:loc>
-            <image:title>Cherry GUI - Best MM2 Script with Pink Sakura Theme</image:title>
-            <image:caption>Cherry GUI interface showing ESP and auto farm features</image:caption>
-        </image:image>
     </url>
-
-    <!-- Script Download / Main Script Section -->
+    
+    <!-- Legal & Contact Pages (Assuming you create these based on your footer) -->
     <url>
-        <loc>https://mm2scripts.net/#script</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <!-- Features Section -->
-    <url>
-        <loc>https://mm2scripts.net/#features</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- Executors Support Section -->
-    <url>
-        <loc>https://mm2scripts.net/#executors</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-
-    <!-- How to Use Section -->
-    <url>
-        <loc>https://mm2scripts.net/#howto</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
+        <loc>https://mm2scripts.com/privacy-policy</loc>
+        <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Reviews Section -->
-    <url>
-        <loc>https://mm2scripts.net/#reviews</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.75</priority>
-    </url>
-
-    <!-- MM2 Scripts Category Page -->
-    <url>
-        <loc>https://mm2scripts.net/mm2-scripts</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Solara Executor Script Page -->
-    <url>
-        <loc>https://mm2scripts.net/solara-script</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Delta Executor Script Page -->
-    <url>
-        <loc>https://mm2scripts.net/delta-script</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- CodeX Executor Script Page -->
-    <url>
-        <loc>https://mm2scripts.net/codex-script</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Wave Executor Script Page -->
-    <url>
-        <loc>https://mm2scripts.net/wave-script</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Zenith Executor Script Page -->
-    <url>
-        <loc>https://mm2scripts.net/zenith-script</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Auto Farm Guide Page -->
-    <url>
-        <loc>https://mm2scripts.net/auto-farm-guide</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- ESP Tutorial Page -->
-    <url>
-        <loc>https://mm2scripts.net/esp-tutorial</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Kill All Feature Page -->
-    <url>
-        <loc>https://mm2scripts.net/kill-all-feature</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <!-- Changelog / Updates Page -->
-    <url>
-        <loc>https://mm2scripts.net/changelog</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
-
-    <!-- FAQ Page -->
     <url>
-        <loc>https://mm2scripts.net/faq</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
+        <loc>https://mm2scripts.com/terms-of-service</loc>
+        <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://mm2scripts.com/contact</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
-
-    <!-- Privacy Policy -->
-    <url>
-        <loc>https://mm2scripts.net/privacy</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-
-    <!-- Terms of Service -->
-    <url>
-        <loc>https://mm2scripts.net/terms</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-
-    <!-- Contact Page -->
-    <url>
-        <loc>https://mm2scripts.net/contact</loc>
-        <lastmod>2024-12-15T10:00:00+00:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.4</priority>
-    </url>
-
 </urlset>
