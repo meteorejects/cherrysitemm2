@@ -1,0 +1,6 @@
+# Allow all search engine bots to crawl the site
+User-agent: *
+Allow: /
+
+# Point to the XML sitemap for better indexing
+Sitemap: https://mm2scripts.com/sitemap.xml
