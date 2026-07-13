@@ -2,28 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Main Homepage -->
     <url>
-        <loc>https://mm2scripts.com/</loc>
-        <lastmod>2026-07-11</lastmod>
+        <loc>https://mm2scripts.net/</loc>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     
-    <!-- Legal & Contact Pages (Assuming you create these based on your footer) -->
+    <!-- Legal Pages (Based on your footer links) -->
     <url>
-        <loc>https://mm2scripts.com/privacy-policy</loc>
-        <lastmod>2026-07-11</lastmod>
+        <loc>https://mm2scripts.net/privacy-policy</loc>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://mm2scripts.com/terms-of-service</loc>
-        <lastmod>2026-07-11</lastmod>
+        <loc>https://mm2scripts.net/terms-of-service</loc>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
+    
+    <!-- Support/Contact Page -->
     <url>
-        <loc>https://mm2scripts.com/contact</loc>
-        <lastmod>2026-07-11</lastmod>
+        <loc>https://mm2scripts.net/contact</loc>
+        <lastmod>2026-07-13</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
