@@ -31,137 +31,19 @@
     <meta name="twitter:description" content="Discover the latest MM2 scripts, updates, and compatibility guides in a premium hub. Download the ultimate Roblox Murder Mystery 2 script today.">
     <meta name="twitter:image" content="https://mm2scripts.net/twitter-image.jpg">
 
-    <!-- Fonts & Icons -->
+    <!-- Preconnect to Google Fonts to accelerate font delivery -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts with display=swap (already non-blocking) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (small, usually not a bottleneck; kept as standard link) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        sakura: '#FFC0CB',
-                        softsakura: '#FFD7E5',
-                        charcoal: '#111111',
-                        glass: 'rgba(255, 255, 255, 0.05)',
-                        glassborder: 'rgba(255, 192, 203, 0.2)'
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Self-hosted, purged Tailwind CSS (replace the render-blocking CDN script) -->
+    <link rel="stylesheet" href="/css/tailwind.min.css">
 
-    <!-- Custom CSS for Cherry Blossom Animations & Glassmorphism -->
-    <style>
-        body {
-            background-color: #111111;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Glassmorphism Classes */
-        .glass-card {
-            background: rgba(30, 30, 30, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 192, 203, 0.15);
-            border-radius: 16px;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .glass-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 192, 203, 0.5);
-            box-shadow: 0 10px 30px -10px rgba(255, 192, 203, 0.2);
-        }
-
-        .glass-nav {
-            background: rgba(17, 17, 17, 0.8);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 192, 203, 0.1);
-        }
-
-        /* Cherry Blossom Petals */
-        #petal-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .petal {
-            position: absolute;
-            background: linear-gradient(135deg, #FFC0CB, #FFD7E5);
-            border-radius: 15px 0 15px 0;
-            opacity: 0.6;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-10vh) rotate(0deg) scale(0.5);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.8;
-            }
-            90% {
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(110vh) rotate(360deg) scale(1.5);
-                opacity: 0;
-            }
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #111111;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #FFC0CB;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #FFD7E5;
-        }
-
-        /* Gradient Text */
-        .text-gradient {
-            background: linear-gradient(to right, #FFC0CB, #FFD7E5, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Hero Gradient Glow */
-        .hero-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255,192,203,0.15) 0%, rgba(17,17,17,0) 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
-    </style>
-
-    <!-- Schema Markup -->
+    <!-- Schema Markup (unchanged) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -292,8 +174,9 @@
                     <a href="#features" class="text-gray-300 hover:text-sakura transition-colors font-medium">Features</a>
                     <a href="#faq" class="text-gray-300 hover:text-sakura transition-colors font-medium">FAQ</a>
                 </div>
+                <!-- Accessibility: added aria-label to mobile menu button -->
                 <div class="md:hidden">
-                    <button class="text-white focus:outline-none">
+                    <button class="text-white focus:outline-none" aria-label="Toggle mobile navigation">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -356,16 +239,14 @@
             </div>
         </section>
 
-        <!-- Supported Executors Section -->
+        <!-- Supported Executors Section (unchanged, but generated via script remains) -->
         <section id="executors" class="py-20 bg-black/20 border-y border-sakura/5">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Supported <span class="text-sakura">Executors</span></h2>
                     <p class="text-gray-400 max-w-2xl mx-auto">Our Roblox MM2 Script is optimized and tested for compatibility across the industry's most popular execution engines.</p>
                 </div>
-
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <!-- Cards Generation -->
                     <script>
                         const executors = [
                             { name: 'Zenith', platform: 'Windows', icon: 'fa-windows' },
@@ -385,7 +266,6 @@
                             { name: 'Volcano', platform: 'Windows', icon: 'fa-fire' },
                             { name: 'Valex', platform: 'Windows', icon: 'fa-shield-halved' }
                         ];
-
                         document.write(executors.map(ex => `
                             <div class="glass-card p-6 flex flex-col items-center text-center">
                                 <div class="w-14 h-14 rounded-full bg-sakura/10 flex items-center justify-center mb-4 text-sakura text-2xl border border-sakura/20">
@@ -400,46 +280,39 @@
             </div>
         </section>
 
-        <!-- Features Section -->
+        <!-- Features Section (unchanged) -->
         <section id="features" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Unmatched <span class="text-sakura">Features</span></h2>
                     <p class="text-gray-400 max-w-2xl mx-auto">Experience the ultimate MM2 Auto Farm, ESP, and GUI utility packed with industry-leading advantages.</p>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
                     <div class="glass-card p-8">
                         <i class="fa-solid fa-wand-magic-sparkles text-sakura text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Modern Interface</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">A sleek, bloat-free MM2 GUI designed for maximum aesthetics and ease of use. Toggle features effortlessly.</p>
                     </div>
-                    <!-- Feature 2 -->
                     <div class="glass-card p-8">
                         <i class="fa-solid fa-arrows-rotate text-sakura text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Frequent Updates</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">Continuous delivery of updated MM2 scripts ensuring flawless performance right after the latest Roblox patches.</p>
                     </div>
-                    <!-- Feature 3 -->
                     <div class="glass-card p-8">
                         <i class="fa-solid fa-puzzle-piece text-sakura text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Compatibility Information</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">Stay informed on exactly which executors and platforms are currently operational with our script hub.</p>
                     </div>
-                    <!-- Feature 4 -->
                     <div class="glass-card p-8">
                         <i class="fa-solid fa-jet-fighter text-sakura text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Fast Performance</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">Optimized Lua logic guarantees your game runs smoothly without FPS drops while auto farming.</p>
                     </div>
-                    <!-- Feature 5 -->
                     <div class="glass-card p-8">
                         <i class="fa-solid fa-mobile-button text-sakura text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Mobile Friendly</h3>
                         <p class="text-gray-400 text-sm leading-relaxed">Full support for mobile executors. Dominate MM2 directly from your Android or iOS device.</p>
                     </div>
-                    <!-- Feature 6 -->
                     <div class="glass-card p-8">
                         <i class="fa-solid fa-users text-sakura text-3xl mb-4"></i>
                         <h3 class="text-xl font-bold mb-2">Community Focus</h3>
@@ -449,16 +322,14 @@
             </div>
         </section>
 
-        <!-- FAQ Section -->
+        <!-- FAQ Section (unchanged) -->
         <section id="faq" class="py-20 bg-black/20 border-y border-sakura/5">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked <span class="text-sakura">Questions</span></h2>
                     <p class="text-gray-400">Everything you need to know about MM2Scripts, compatibility, and safety.</p>
                 </div>
-
                 <div class="space-y-4">
-                    <!-- FAQ Items -->
                     <script>
                         const faqs = [
                             { q: "What are MM2 Scripts?", a: "MM2 scripts are automated codes designed to enhance the gameplay experience in Roblox Murder Mystery 2, offering features like ESP, auto farming, and modern GUIs." },
@@ -472,7 +343,6 @@
                             { q: "What executor is recommended for Mac?", a: "Macsploit and Hydrogen are excellent, highly-recommended executors for Macintosh users looking to run MM2 scripts." },
                             { q: "Is MM2Scripts free to use?", a: "Yes, accessing our database, compatibility guides, and core MM2 script loadstrings is entirely free." }
                         ];
-
                         document.write(faqs.map((faq, i) => `
                             <div class="glass-card rounded-xl overflow-hidden">
                                 <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center" onclick="toggleFaq(${i})">
@@ -484,19 +354,12 @@
                                 </div>
                             </div>
                         `).join(''));
-
-                        function toggleFaq(index) {
-                            const content = document.getElementById(`content-${index}`);
-                            const icon = document.getElementById(`icon-${index}`);
-                            content.classList.toggle('hidden');
-                            icon.classList.toggle('rotate-180');
-                        }
                     </script>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- About Section (unchanged) -->
         <section id="about" class="py-20 text-center">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold mb-6">About <span class="text-sakura">MM2Scripts.net</span></h2>
@@ -513,7 +376,7 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (unchanged) -->
     <footer class="bg-[#0a0a0a] border-t border-sakura/10 pt-16 pb-8 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
@@ -552,60 +415,51 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Petals and Copy functionality -->
     <script>
-        // Cherry Blossom Petal Generator
+        // Cherry Blossom Petal Generator (unchanged)
         function createPetal() {
             const petal = document.createElement('div');
             petal.classList.add('petal');
-            
-            // Randomize properties
-            const size = Math.random() * 10 + 5; // 5px to 15px
-            const left = Math.random() * 100; // 0% to 100%
-            const duration = Math.random() * 5 + 5; // 5s to 10s
-            const delay = Math.random() * 5; // 0s to 5s
-
+            const size = Math.random() * 10 + 5;
+            const left = Math.random() * 100;
+            const duration = Math.random() * 5 + 5;
+            const delay = Math.random() * 5;
             petal.style.width = `${size}px`;
             petal.style.height = `${size}px`;
             petal.style.left = `${left}vw`;
             petal.style.animationDuration = `${duration}s`;
             petal.style.animationDelay = `${delay}s`;
-
             document.getElementById('petal-container').appendChild(petal);
-
-            // Remove petal after animation ends to free up DOM
-            setTimeout(() => {
-                petal.remove();
-            }, (duration + delay) * 1000);
+            setTimeout(() => { petal.remove(); }, (duration + delay) * 1000);
         }
-
-        // Generate petals continuously
         setInterval(createPetal, 400);
-
-        // Initial burst
         for(let i=0; i<15; i++) {
             setTimeout(createPetal, Math.random() * 2000);
         }
 
-        // Copy Code Functionality
+        // Copy Script (unchanged)
         function copyScript() {
             const scriptText = `loadstring(game:HttpGet("https://pastefy.app/EZRab2CO/raw"))()`;
             navigator.clipboard.writeText(scriptText).then(() => {
                 const btnText = document.getElementById('copyText');
                 const btnIcon = document.querySelector('#copyBtn i');
-                
                 btnText.innerText = 'Copied!';
                 btnIcon.classList.remove('fa-copy', 'fa-regular');
                 btnIcon.classList.add('fa-check', 'fa-solid', 'text-green-400');
-                
                 setTimeout(() => {
                     btnText.innerText = 'Copy';
                     btnIcon.classList.remove('fa-check', 'fa-solid', 'text-green-400');
                     btnIcon.classList.add('fa-copy', 'fa-regular');
                 }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-            });
+            }).catch(err => console.error('Failed to copy: ', err));
+        }
+
+        // FAQ toggle (unchanged)
+        function toggleFaq(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
         }
     </script>
 </body>
