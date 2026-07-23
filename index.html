@@ -1,49 +1,137 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MM2 Scripts | Premium Murder Mystery 2 Blossom Hub</title>
+    
     <link rel="icon" type="image/png" href="https://mm2scripts.net/favicon.png">
+
     <meta name="description" content="Discover the latest MM2 scripts, updates, and compatibility guides in a premium hub. Download the ultimate Roblox Murder Mystery 2 script today.">
     <meta name="keywords" content="MM2 Scripts, Murder Mystery 2 Scripts, MM2 Script, Roblox MM2 Script, MM2 GUI, MM2 Auto Farm, MM2 ESP, Blossom Hub, MM2Scripts, MM2 Script Download, MM2 Script Guide, MM2 Script Tutorial, Updated MM2 Scripts, MM2 Script Compatibility">
     <meta name="author" content="MM2Scripts">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mm2scripts.net/">
+    
     <meta property="og:title" content="MM2Scripts | Premium Murder Mystery 2 Blossom Hub">
     <meta property="og:description" content="Discover the latest MM2 scripts, updates, and compatibility guides in a premium hub. Download the ultimate Roblox Murder Mystery 2 script today.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mm2scripts.net/">
     <meta property="og:image" content="https://mm2scripts.net/og-image.jpg">
     <meta property="og:site_name" content="MM2Scripts">
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MM2Scripts | Premium Murder Mystery 2 Blossom Hub">
     <meta name="twitter:description" content="Discover the latest MM2 scripts, updates, and compatibility guides in a premium hub. Download the ultimate Roblox Murder Mystery 2 script today.">
     <meta name="twitter:image" content="https://mm2scripts.net/twitter-image.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        darkMode: 'class',
-        theme: {
-            extend: {
-                fontFamily: {
-                    sans: ['Poppins', 'sans-serif'],
-                },
-                colors: {
-                    sakura: '#FFC0CB',
-                    softsakura: '#FFD7E5',
-                    charcoal: '#111111',
-                    glass: 'rgba(255, 255, 255, 0.05)',
-                    glassborder: 'rgba(255, 192, 203, 0.2)'
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        sakura: '#FFC0CB',
+                        softsakura: '#FFD7E5',
+                        charcoal: '#111111',
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                        glassborder: 'rgba(255, 192, 203, 0.2)'
+                    }
                 }
             }
         }
-    };
-</script>
+    </script>
+
+    <style>
+        html, body {
+            background-color: #111111 !important;
+            color: #ffffff !important;
+            overflow-x: hidden;
+            scroll-behavior: auto;
+        }
+
+        .glass-card {
+            background: rgba(30, 30, 30, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 192, 203, 0.15);
+            border-radius: 16px;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 192, 203, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(255, 192, 203, 0.2);
+        }
+
+        .glass-nav {
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 192, 203, 0.1);
+        }
+
+        #petal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            background: linear-gradient(135deg, #FFC0CB, #FFD7E5);
+            border-radius: 15px 0 15px 0;
+            opacity: 0.6;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg) scale(0.5); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(110vh) rotate(360deg) scale(1.5); opacity: 0; }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111111; }
+        ::-webkit-scrollbar-thumb { background: #FFC0CB; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFD7E5; }
+
+        .text-gradient {
+            background: linear-gradient(to right, #FFC0CB, #FFD7E5, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,192,203,0.15) 0%, rgba(17,17,17,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -122,7 +210,7 @@
     }
     </script>
 </head>
-<body class="antialiased relative">
+<body class="antialiased">
 
     <div id="petal-container"></div>
 
@@ -149,16 +237,27 @@
         </div>
     </nav>
 
-    <main class="relative z-10">
+    <main>
         <section id="hero" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
             <div class="hero-glow"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
-                <span class="inline-block py-1 px-3 rounded-full bg-sakura/10 border border-sakura/20 text-sakura text-sm font-semibold mb-6 tracking-wide uppercase shadow-[0_0_15px_rgba(255,192,203,0.2)]">V2.0 Released & Updated</span>
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">Premium Murder Mystery 2 <br /><span class="text-gradient">Blossom Hub</span></h1>
-                <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-400 mx-auto mb-10 leading-relaxed">Discover the latest MM2 scripts, compatibility information, updates, and guides in a clean, fast, and professional experience.</p>
+                <span class="inline-block py-1 px-3 rounded-full bg-sakura/10 border border-sakura/20 text-sakura text-sm font-semibold mb-6 tracking-wide uppercase" style="box-shadow: 0 0 15px rgba(255,192,203,0.2);">
+                    V2.0 Released & Updated
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
+                    Premium Murder Mystery 2 <br />
+                    <span class="text-gradient">Blossom Hub</span>
+                </h1>
+                <p class="mt-4 max-w-2xl text-lg md:text-xl text-gray-400 mx-auto mb-10 leading-relaxed">
+                    Discover the latest MM2 scripts, compatibility information, updates, and guides in a clean, fast, and professional experience.
+                </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#script-hub" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-charcoal bg-sakura hover:bg-softsakura transition-all shadow-[0_0_20px_rgba(255,192,203,0.4)] hover:shadow-[0_0_30px_rgba(255,192,203,0.6)]">Copy Script <i class="fa-solid fa-code ml-2"></i></a>
-                    <a href="#executors" class="inline-flex justify-center items-center px-8 py-4 border border-sakura/30 text-base font-medium rounded-full text-white bg-transparent hover:bg-sakura/10 transition-all">Supported Executors <i class="fa-solid fa-microchip ml-2"></i></a>
+                    <a href="#script-hub" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-charcoal bg-sakura hover:bg-softsakura transition-all" style="box-shadow: 0 0 20px rgba(255,192,203,0.4);">
+                        Copy Script <i class="fa-solid fa-code ml-2"></i>
+                    </a>
+                    <a href="#executors" class="inline-flex justify-center items-center px-8 py-4 border border-sakura/30 text-base font-medium rounded-full text-white bg-transparent hover:bg-sakura/10 transition-all">
+                        Supported Executors <i class="fa-solid fa-microchip ml-2"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -169,7 +268,8 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Official <span class="text-sakura">MM2 Script</span> Loadstring</h2>
                     <p class="text-gray-400">Copy the code below and paste it into your supported executor.</p>
                 </div>
-                <div class="glass-card p-1 pb-6 overflow-hidden relative group">
+                
+                <div class="glass-card p-1 pb-6 overflow-hidden relative">
                     <div class="flex items-center justify-between px-4 py-3 border-b border-sakura/10 bg-black/40 rounded-t-[15px]">
                         <div class="flex gap-2">
                             <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
@@ -182,7 +282,7 @@
                         </button>
                     </div>
                     <div class="p-6 overflow-x-auto">
-<pre class="font-mono text-sm md:text-base text-gray-300 whitespace-pre-wrap word-break"><code id="scriptCode"><span class="text-blue-400">loadstring</span>(<span class="text-purple-400">game</span>:<span class="text-blue-400">HttpGet</span>(<span class="text-green-400">"https://pastefy.app/EZRab2CO/raw"</span>))()</code></pre>
+<pre class="font-mono text-sm md:text-base text-gray-300 whitespace-pre-wrap"><code id="scriptCode"><span class="text-blue-400">loadstring</span>(<span class="text-purple-400">game</span>:<span class="text-blue-400">HttpGet</span>(<span class="text-green-400">"https://pastefy.app/EZRab2CO/raw"</span>))()</code></pre>
                     </div>
                 </div>
             </div>
@@ -194,37 +294,8 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Supported <span class="text-sakura">Executors</span></h2>
                     <p class="text-gray-400 max-w-2xl mx-auto">Our Roblox MM2 Script is optimized and tested for compatibility across the industry's most popular execution engines.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <script>
-                        const executors = [
-                            { name: 'Zenith', platform: 'Windows', icon: 'fa-windows' },
-                            { name: 'Delta', platform: 'Android / iOS', icon: 'fa-mobile-screen' },
-                            { name: 'CodeX', platform: 'Windows / Android / iOS', icon: 'fa-layer-group' },
-                            { name: 'Macsploit', platform: 'Macintosh', icon: 'fa-apple' },
-                            { name: 'Solara', platform: 'Windows', icon: 'fa-windows' },
-                            { name: 'Wave', platform: 'Windows', icon: 'fa-windows' },
-                            { name: 'Hydrogen', platform: 'Macintosh', icon: 'fa-apple' },
-                            { name: 'Sirhurt', platform: 'Windows', icon: 'fa-windows' },
-                            { name: 'Nihon', platform: 'Windows', icon: 'fa-windows' },
-                            { name: 'Cryptic', platform: 'Windows / Android / iOS', icon: 'fa-mobile-screen' },
-                            { name: 'Seliware', platform: 'Windows', icon: 'fa-windows' },
-                            { name: 'Swift', platform: 'Windows', icon: 'fa-bolt' },
-                            { name: 'Velocity', platform: 'Windows', icon: 'fa-gauge-high' },
-                            { name: 'Potassium', platform: 'Windows', icon: 'fa-vial' },
-                            { name: 'Volcano', platform: 'Windows', icon: 'fa-fire' },
-                            { name: 'Valex', platform: 'Windows', icon: 'fa-shield-halved' }
-                        ];
-                        document.write(executors.map(ex => `
-                            <div class="glass-card p-6 flex flex-col items-center text-center">
-                                <div class="w-14 h-14 rounded-full bg-sakura/10 flex items-center justify-center mb-4 text-sakura text-2xl border border-sakura/20">
-                                    <i class="fa-brands ${ex.icon} ${!ex.icon.includes('fa-') ? 'fa-solid ' + ex.icon : ''}"></i>
-                                </div>
-                                <h3 class="text-lg font-semibold text-white mb-1">${ex.name}</h3>
-                                <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">${ex.platform}</p>
-                            </div>
-                        `).join(''));
-                    </script>
-                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="executor-grid"></div>
             </div>
         </section>
 
@@ -234,13 +305,38 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Unmatched <span class="text-sakura">Features</span></h2>
                     <p class="text-gray-400 max-w-2xl mx-auto">Experience the ultimate MM2 Auto Farm, ESP, and GUI utility packed with industry-leading advantages.</p>
                 </div>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="glass-card p-8"><i class="fa-solid fa-wand-magic-sparkles text-sakura text-3xl mb-4"></i><h3 class="text-xl font-bold mb-2">Modern Interface</h3><p class="text-gray-400 text-sm leading-relaxed">A sleek, bloat-free MM2 GUI designed for maximum aesthetics and ease of use. Toggle features effortlessly.</p></div>
-                    <div class="glass-card p-8"><i class="fa-solid fa-arrows-rotate text-sakura text-3xl mb-4"></i><h3 class="text-xl font-bold mb-2">Frequent Updates</h3><p class="text-gray-400 text-sm leading-relaxed">Continuous delivery of updated MM2 scripts ensuring flawless performance right after the latest Roblox patches.</p></div>
-                    <div class="glass-card p-8"><i class="fa-solid fa-puzzle-piece text-sakura text-3xl mb-4"></i><h3 class="text-xl font-bold mb-2">Compatibility Information</h3><p class="text-gray-400 text-sm leading-relaxed">Stay informed on exactly which executors and platforms are currently operational with our script hub.</p></div>
-                    <div class="glass-card p-8"><i class="fa-solid fa-jet-fighter text-sakura text-3xl mb-4"></i><h3 class="text-xl font-bold mb-2">Fast Performance</h3><p class="text-gray-400 text-sm leading-relaxed">Optimized Lua logic guarantees your game runs smoothly without FPS drops while auto farming.</p></div>
-                    <div class="glass-card p-8"><i class="fa-solid fa-mobile-button text-sakura text-3xl mb-4"></i><h3 class="text-xl font-bold mb-2">Mobile Friendly</h3><p class="text-gray-400 text-sm leading-relaxed">Full support for mobile executors. Dominate MM2 directly from your Android or iOS device.</p></div>
-                    <div class="glass-card p-8"><i class="fa-solid fa-users text-sakura text-3xl mb-4"></i><h3 class="text-xl font-bold mb-2">Community Focus</h3><p class="text-gray-400 text-sm leading-relaxed">Join thousands of users. Benefit from an MM2 script tutorial database, guides, and shared setups.</p></div>
+                    <div class="glass-card p-8">
+                        <i class="fa-solid fa-wand-magic-sparkles text-sakura text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Modern Interface</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">A sleek, bloat-free MM2 GUI designed for maximum aesthetics and ease of use. Toggle features effortlessly.</p>
+                    </div>
+                    <div class="glass-card p-8">
+                        <i class="fa-solid fa-arrows-rotate text-sakura text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Frequent Updates</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Continuous delivery of updated MM2 scripts ensuring flawless performance right after the latest Roblox patches.</p>
+                    </div>
+                    <div class="glass-card p-8">
+                        <i class="fa-solid fa-puzzle-piece text-sakura text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Compatibility Information</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Stay informed on exactly which executors and platforms are currently operational with our script hub.</p>
+                    </div>
+                    <div class="glass-card p-8">
+                        <i class="fa-solid fa-jet-fighter text-sakura text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Fast Performance</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Optimized Lua logic guarantees your game runs smoothly without FPS drops while auto farming.</p>
+                    </div>
+                    <div class="glass-card p-8">
+                        <i class="fa-solid fa-mobile-button text-sakura text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Mobile Friendly</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Full support for mobile executors. Dominate MM2 directly from your Android or iOS device.</p>
+                    </div>
+                    <div class="glass-card p-8">
+                        <i class="fa-solid fa-users text-sakura text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Community Focus</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Join thousands of users. Benefit from an MM2 script tutorial database, guides, and shared setups.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -251,31 +347,8 @@
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked <span class="text-sakura">Questions</span></h2>
                     <p class="text-gray-400">Everything you need to know about MM2Scripts, compatibility, and safety.</p>
                 </div>
-                <div class="space-y-4">
-                    <script>
-                        const faqs = [
-                            { q: "What are MM2 Scripts?", a: "MM2 scripts are automated codes designed to enhance the gameplay experience in Roblox Murder Mystery 2, offering features like ESP, auto farming, and modern GUIs." },
-                            { q: "Are MM2 Scripts safe to use?", a: "We prioritize providing up-to-date compatibility information and secure download guides. However, utilizing third-party tools in Roblox carries inherent risks, so we recommend using alternate accounts." },
-                            { q: "How do I use a Roblox MM2 Script?", a: "To use an MM2 script, you need a compatible executor (like Zenith, Delta, or Wave). Simply copy the loadstring provided on our site, paste it into the executor, and inject it while the game is running." },
-                            { q: "What is the best MM2 GUI?", a: "The best MM2 GUI depends on your needs, but top-tier scripts usually include a clean interface, robust auto farm, and reliable ESP features without lag." },
-                            { q: "Can I use an MM2 Auto Farm on mobile?", a: "Yes, mobile executors like Delta, CodeX, and Cryptic support mobile auto farming for Murder Mystery 2 on Android and iOS devices." },
-                            { q: "What is an MM2 ESP?", a: "ESP (Extra Sensory Perception) allows you to see the roles (Murderer, Sheriff, Innocent) and locations of other players through walls." },
-                            { q: "How often is Blossom Hub updated?", a: "We update our MM2 Script compatibility and features daily to ensure they work smoothly with the latest Roblox patches." },
-                            { q: "Do these scripts work with the latest Roblox updates?", a: "Yes, our hub maintains compatibility information to let you know which scripts and executors are functional after recent Roblox updates." },
-                            { q: "What executor is recommended for Mac?", a: "Macsploit and Hydrogen are excellent, highly-recommended executors for Macintosh users looking to run MM2 scripts." },
-                            { q: "Is MM2Scripts free to use?", a: "Yes, accessing our database, compatibility guides, and core MM2 script loadstrings is entirely free." }
-                        ];
-                        document.write(faqs.map((faq, i) => `
-                            <div class="glass-card rounded-xl overflow-hidden">
-                                <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center" onclick="toggleFaq(${i})">
-                                    <span class="font-semibold text-white">${faq.q}</span>
-                                    <i class="fa-solid fa-chevron-down text-sakura transition-transform duration-300" id="icon-${i}"></i>
-                                </button>
-                                <div class="px-6 pb-4 hidden text-gray-400 text-sm" id="content-${i}">${faq.a}</div>
-                            </div>
-                        `).join(''));
-                    </script>
-                </div>
+
+                <div class="space-y-4" id="faq-list"></div>
             </div>
         </section>
 
@@ -283,19 +356,28 @@
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold mb-6">About <span class="text-sakura">MM2Scripts.net</span></h2>
                 <div class="glass-card p-8 text-gray-300 leading-relaxed text-left md:text-center">
-                    <p class="mb-4">MM2Scripts.net is established as the premier hub for educational resources, compatibility information, updates, and comprehensive guides regarding Murder Mystery 2 scripts. We recognize the community's need for a safe, well-organized, and premium-tier platform to locate the tools they need.</p>
-                    <p>With a strict focus on robust design and seamless user experience, we track the functionality of various executors and compile the most efficient MM2 Auto Farm and ESP solutions available on the web today.</p>
+                    <p class="mb-4">
+                        MM2Scripts.net is established as the premier hub for educational resources, compatibility information, updates, and comprehensive guides regarding Murder Mystery 2 scripts. We recognize the community's need for a safe, well-organized, and premium-tier platform to locate the tools they need.
+                    </p>
+                    <p>
+                        With a strict focus on robust design and seamless user experience, we track the functionality of various executors and compile the most efficient MM2 Auto Farm and ESP solutions available on the web today.
+                    </p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-[#0a0a0a] border-t border-sakura/10 pt-16 pb-8 relative z-10">
+    <footer class="bg-[#0a0a0a] border-t border-sakura/10 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-2 mb-4"><i class="fa-solid fa-leaf text-sakura text-xl"></i><span class="font-bold text-xl text-white">MM2<span class="text-sakura">Scripts</span></span></div>
-                    <p class="text-gray-500 text-sm leading-relaxed max-w-sm">The definitive source for Roblox Murder Mystery 2 scripts, compatibility trackers, and reliable updates wrapped in a modern experience.</p>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-sakura text-xl"></i>
+                        <span class="font-bold text-xl text-white">MM2<span class="text-sakura">Scripts</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
+                        The definitive source for Roblox Murder Mystery 2 scripts, compatibility trackers, and reliable updates wrapped in a modern experience.
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-white font-semibold mb-4 tracking-wide">Quick Links</h3>
@@ -324,6 +406,70 @@
     </footer>
 
     <script>
+        // Generate executors
+        const executors = [
+            { name: 'Zenith', platform: 'Windows', icon: 'fa-windows' },
+            { name: 'Delta', platform: 'Android / iOS', icon: 'fa-mobile-screen' },
+            { name: 'CodeX', platform: 'Windows / Android / iOS', icon: 'fa-layer-group' },
+            { name: 'Macsploit', platform: 'Macintosh', icon: 'fa-apple' },
+            { name: 'Solara', platform: 'Windows', icon: 'fa-windows' },
+            { name: 'Wave', platform: 'Windows', icon: 'fa-windows' },
+            { name: 'Hydrogen', platform: 'Macintosh', icon: 'fa-apple' },
+            { name: 'Sirhurt', platform: 'Windows', icon: 'fa-windows' },
+            { name: 'Nihon', platform: 'Windows', icon: 'fa-windows' },
+            { name: 'Cryptic', platform: 'Windows / Android / iOS', icon: 'fa-mobile-screen' },
+            { name: 'Seliware', platform: 'Windows', icon: 'fa-windows' },
+            { name: 'Swift', platform: 'Windows', icon: 'fa-bolt' },
+            { name: 'Velocity', platform: 'Windows', icon: 'fa-gauge-high' },
+            { name: 'Potassium', platform: 'Windows', icon: 'fa-vial' },
+            { name: 'Volcano', platform: 'Windows', icon: 'fa-fire' },
+            { name: 'Valex', platform: 'Windows', icon: 'fa-shield-halved' }
+        ];
+
+        document.getElementById('executor-grid').innerHTML = executors.map(ex => `
+            <div class="glass-card p-6 flex flex-col items-center text-center">
+                <div class="w-14 h-14 rounded-full bg-sakura/10 flex items-center justify-center mb-4 text-sakura text-2xl border border-sakura/20">
+                    <i class="fa-brands ${ex.icon}"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-white mb-1">${ex.name}</h3>
+                <p class="text-xs text-gray-400 font-medium uppercase tracking-wider">${ex.platform}</p>
+            </div>
+        `).join('');
+
+        // Generate FAQs
+        const faqs = [
+            { q: "What are MM2 Scripts?", a: "MM2 scripts are automated codes designed to enhance the gameplay experience in Roblox Murder Mystery 2, offering features like ESP, auto farming, and modern GUIs." },
+            { q: "Are MM2 Scripts safe to use?", a: "We prioritize providing up-to-date compatibility information and secure download guides. However, utilizing third-party tools in Roblox carries inherent risks, so we recommend using alternate accounts." },
+            { q: "How do I use a Roblox MM2 Script?", a: "To use an MM2 script, you need a compatible executor (like Zenith, Delta, or Wave). Simply copy the loadstring provided on our site, paste it into the executor, and inject it while the game is running." },
+            { q: "What is the best MM2 GUI?", a: "The best MM2 GUI depends on your needs, but top-tier scripts usually include a clean interface, robust auto farm, and reliable ESP features without lag." },
+            { q: "Can I use an MM2 Auto Farm on mobile?", a: "Yes, mobile executors like Delta, CodeX, and Cryptic support mobile auto farming for Murder Mystery 2 on Android and iOS devices." },
+            { q: "What is an MM2 ESP?", a: "ESP (Extra Sensory Perception) allows you to see the roles (Murderer, Sheriff, Innocent) and locations of other players through walls." },
+            { q: "How often is Blossom Hub updated?", a: "We update our MM2 Script compatibility and features daily to ensure they work smoothly with the latest Roblox patches." },
+            { q: "Do these scripts work with the latest Roblox updates?", a: "Yes, our hub maintains compatibility information to let you know which scripts and executors are functional after recent Roblox updates." },
+            { q: "What executor is recommended for Mac?", a: "Macsploit and Hydrogen are excellent, highly-recommended executors for Macintosh users looking to run MM2 scripts." },
+            { q: "Is MM2Scripts free to use?", a: "Yes, accessing our database, compatibility guides, and core MM2 script loadstrings is entirely free." }
+        ];
+
+        document.getElementById('faq-list').innerHTML = faqs.map((faq, i) => `
+            <div class="glass-card rounded-xl overflow-hidden">
+                <button class="w-full text-left px-6 py-4 focus:outline-none flex justify-between items-center" onclick="toggleFaq(${i})">
+                    <span class="font-semibold text-white">${faq.q}</span>
+                    <i class="fa-solid fa-chevron-down text-sakura transition-transform duration-300" id="icon-${i}"></i>
+                </button>
+                <div class="px-6 pb-4 hidden text-gray-400 text-sm" id="content-${i}">
+                    ${faq.a}
+                </div>
+            </div>
+        `).join('');
+
+        function toggleFaq(index) {
+            const content = document.getElementById('content-' + index);
+            const icon = document.getElementById('icon-' + index);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Cherry blossom petals
         function createPetal() {
             const petal = document.createElement('div');
             petal.classList.add('petal');
@@ -331,38 +477,39 @@
             const left = Math.random() * 100;
             const duration = Math.random() * 5 + 5;
             const delay = Math.random() * 5;
-            petal.style.width = `${size}px`;
-            petal.style.height = `${size}px`;
-            petal.style.left = `${left}vw`;
-            petal.style.animationDuration = `${duration}s`;
-            petal.style.animationDelay = `${delay}s`;
+            petal.style.width = size + 'px';
+            petal.style.height = size + 'px';
+            petal.style.left = left + 'vw';
+            petal.style.animationDuration = duration + 's';
+            petal.style.animationDelay = delay + 's';
             document.getElementById('petal-container').appendChild(petal);
-            setTimeout(() => { petal.remove(); }, (duration + delay) * 1000);
+            setTimeout(function() { petal.remove(); }, (duration + delay) * 1000);
         }
-        setInterval(createPetal, 400);
-        for(let i=0; i<15; i++) { setTimeout(createPetal, Math.random() * 2000); }
 
+        setInterval(createPetal, 400);
+        for (var i = 0; i < 15; i++) {
+            setTimeout(createPetal, Math.random() * 2000);
+        }
+
+        // Copy script
         function copyScript() {
-            const scriptText = `loadstring(game:HttpGet("https://pastefy.app/EZRab2CO/raw"))()`;
-            navigator.clipboard.writeText(scriptText).then(() => {
-                const btnText = document.getElementById('copyText');
-                const btnIcon = document.querySelector('#copyBtn i');
+            var scriptText = 'loadstring(game:HttpGet("https://pastefy.app/EZRab2CO/raw"))()';
+            navigator.clipboard.writeText(scriptText).then(function() {
+                var btnText = document.getElementById('copyText');
+                var btnIcon = document.querySelector('#copyBtn i');
                 btnText.innerText = 'Copied!';
                 btnIcon.classList.remove('fa-copy', 'fa-regular');
-                btnIcon.classList.add('fa-check', 'fa-solid', 'text-green-400');
-                setTimeout(() => {
+                btnIcon.classList.add('fa-check', 'fa-solid');
+                btnIcon.style.color = '#4ade80';
+                setTimeout(function() {
                     btnText.innerText = 'Copy';
-                    btnIcon.classList.remove('fa-check', 'fa-solid', 'text-green-400');
+                    btnIcon.classList.remove('fa-check', 'fa-solid');
                     btnIcon.classList.add('fa-copy', 'fa-regular');
+                    btnIcon.style.color = '';
                 }, 2000);
-            }).catch(err => console.error('Failed to copy: ', err));
-        }
-
-        function toggleFaq(index) {
-            const content = document.getElementById(`content-${index}`);
-            const icon = document.getElementById(`icon-${index}`);
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
+            }).catch(function(err) {
+                console.error('Failed to copy: ', err);
+            });
         }
     </script>
 </body>
