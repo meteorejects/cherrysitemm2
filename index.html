@@ -24,7 +24,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/tailwind.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                },
+                colors: {
+                    sakura: '#FFC0CB',
+                    softsakura: '#FFD7E5',
+                    charcoal: '#111111',
+                    glass: 'rgba(255, 255, 255, 0.05)',
+                    glassborder: 'rgba(255, 192, 203, 0.2)'
+                }
+            }
+        }
+    };
+</script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
