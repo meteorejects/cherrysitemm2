@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ========== Custom Styles (moved from your inline <style>) ========== */
 body {
     background-color: #111111;
     color: #ffffff;
     overflow-x: hidden;
 }
-
-/* Glassmorphism */
 .glass-card {
     background: rgba(30, 30, 30, 0.4);
     backdrop-filter: blur(12px);
@@ -18,21 +15,17 @@ body {
     border-radius: 16px;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .glass-card:hover {
     transform: translateY(-5px);
     border-color: rgba(255, 192, 203, 0.5);
     box-shadow: 0 10px 30px -10px rgba(255, 192, 203, 0.2);
 }
-
 .glass-nav {
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 192, 203, 0.1);
 }
-
-/* Cherry Blossom Petals */
 #petal-container {
     position: fixed;
     top: 0;
@@ -43,7 +36,6 @@ body {
     z-index: 0;
     overflow: hidden;
 }
-
 .petal {
     position: absolute;
     background: linear-gradient(135deg, #FFC0CB, #FFD7E5);
@@ -51,47 +43,21 @@ body {
     opacity: 0.6;
     animation: fall linear infinite;
 }
-
 @keyframes fall {
-    0% {
-        transform: translateY(-10vh) rotate(0deg) scale(0.5);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.8;
-    }
-    90% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(110vh) rotate(360deg) scale(1.5);
-        opacity: 0;
-    }
+    0% { transform: translateY(-10vh) rotate(0deg) scale(0.5); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(110vh) rotate(360deg) scale(1.5); opacity: 0; }
 }
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #111111;
-}
-::-webkit-scrollbar-thumb {
-    background: #FFC0CB;
-    border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #FFD7E5;
-}
-
-/* Gradient Text */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #111111; }
+::-webkit-scrollbar-thumb { background: #FFC0CB; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FFD7E5; }
 .text-gradient {
     background: linear-gradient(to right, #FFC0CB, #FFD7E5, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-/* Hero Gradient Glow */
 .hero-glow {
     position: absolute;
     top: 50%;
